@@ -37,6 +37,16 @@ def testlist():
 	print('len(s) = ',len(s))
 	print('len(s[3])=',len(s[3]))
 
+def testtuple():
+	print('start test tuple [it cant be modified]')
+	classmates = ('Michael','Bob','Tracy')
+	print(calssmates)
+
+	print('remember if u want define a tuple that have only one element')
+	print('the define is like this t=(1,) add a common to eliminate ambiguity')
+	
+
+
 if __name__ == '__main__':
 	print('start learn python')
 

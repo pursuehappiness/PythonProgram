@@ -9,7 +9,9 @@ class FunctionTest(unittest.TestCase):
 		ret = returnfunc('hello')
 		self.assertEqual('hello',ret)
 
-
+	def test_floor_div(self):
+		ret = floordiv(6,4)
+		self.assertEqual(1,ret)
 
 if __name__ == '__main__':
 	unittest.main()

@@ -44,7 +44,7 @@ def testtuple():
 
 	print('remember if u want define a tuple that have only one element')
 	print('the define is like this t=(1,) add a common to eliminate ambiguity')
-	
+
 
 
 if __name__ == '__main__':
@@ -62,4 +62,4 @@ if __name__ == '__main__':
 	print('a =',a)
 	print('b =',b)
 
-	testlist()
+	testlist() 

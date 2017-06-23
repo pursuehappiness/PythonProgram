@@ -45,6 +45,26 @@ def testtuple():
 	print('remember if u want define a tuple that have only one element')
 	print('the define is like this t=(1,) add a common to eliminate ambiguity')
 
+def testdict():
+	print('start test dict')
+	dic = {'Michael':95,'Bob':75,'Tracy':89}
+	print(dic)
+	print(dic['Michael'])
+	print('test print not exist item will conduct error')
+	print('add a new item to dict')
+
+	dic['ad'] =100
+	print(dic)
+	print(dic['ad'])
+
+
+	print(('test' in dic))
+	print(('Michael' in dic))
+
+	print(dic.get('test',-1232))
+	print(dic.get('Michael',-12))
+
+	print(dic.pop('Michael'))
 
 
 if __name__ == '__main__':
@@ -63,3 +83,5 @@ if __name__ == '__main__':
 	print('b =',b)
 
 	testlist() 
+
+	testdict()

@@ -89,6 +89,16 @@ def testfunctiontypecheck(a):
 def testfuncreturnmultivalue(x,y):
 	return y,x
 
+def testslice():
+	print('start test slice')
+	s = ['michael','sarah','tracy','jack']
+	print(s[0:3])
+	print(s[2:4])
+
+	l=list(range(100))
+	print(l)
+	print(l[:10])
+
 if __name__ == '__main__':
 	print('start learn python')
 
@@ -113,3 +123,5 @@ if __name__ == '__main__':
 	testfunctiontypecheck(True)
 	#testfunctiontypecheck('a')
 	testfunctiontypecheck(100)
+
+	testslice()

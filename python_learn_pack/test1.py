@@ -66,6 +66,18 @@ def testdict():
 
 	print(dic.pop('Michael'))
 
+def testset():
+	s=set([12,12,3,43,54,64,232,43,54,232,232,3,3,])
+	print('start test set')
+	print(s)
+
+	s.add(13)
+	s.add(12)
+	print(s)
+
+	s.remove(3)
+	print(s)
+
 
 if __name__ == '__main__':
 	print('start learn python')
@@ -85,3 +97,5 @@ if __name__ == '__main__':
 	testlist() 
 
 	testdict()
+
+	testset()

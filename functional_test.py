@@ -13,5 +13,10 @@ class FunctionTest(unittest.TestCase):
 		ret = floordiv(6,4)
 		self.assertEqual(1,ret)
 
+	def test_func_ret_multi_value(self):
+		y,x = testfuncreturnmultivalue(100,12)
+		self.assertEqual(y,12)
+		self.assertEqual(x,100)
+
 if __name__ == '__main__':
 	unittest.main()

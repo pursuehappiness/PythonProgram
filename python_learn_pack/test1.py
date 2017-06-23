@@ -66,6 +66,7 @@ def testdict():
 
 	print(dic.pop('Michael'))
 
+
 def testset():
 	s=set([12,12,3,43,54,64,232,43,54,232,232,3,3,])
 	print('start test set')
@@ -78,6 +79,15 @@ def testset():
 	s.remove(3)
 	print(s)
 
+
+def testfunctiontypecheck(a):
+	if not isinstance(a,(int,float)):
+		raise TypeError('bad operadn type')
+	else:
+		print('type check pass')
+
+def testfuncreturnmultivalue(x,y):
+	return y,x
 
 if __name__ == '__main__':
 	print('start learn python')
@@ -99,3 +109,7 @@ if __name__ == '__main__':
 	testdict()
 
 	testset()
+
+	testfunctiontypecheck(True)
+	#testfunctiontypecheck('a')
+	testfunctiontypecheck(100)

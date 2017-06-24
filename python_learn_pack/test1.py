@@ -120,6 +120,51 @@ def testlistgenerator():
 
 	print([('%s = %d'%(k,v)) for k,v in s.items()])
 
+def generatordemo():#the generator like corutine 
+	print('first step of generator')
+	yield(1)
+	print('second step of generator')
+	yield(2)
+	print('third step of generator')
+	yield(3)
+
+def triangles():
+	layer_p = [1]
+	layer_c = [1]
+	layer_i = 1
+
+	while True:
+		yield layer_c
+		layer_p = [x for x in layer_c]
+		for i in range(0,len(layer_p)-1):
+			layer_c[i+1] = layer_p[i]+layer_p[i+1]
+
+		layer_c.append(1)
+
+
+def testgnerator():
+	g = (x*x for x in range(1,11))
+	print(next(g))
+	print(next(g))#the next func use few
+
+	for dat in g:
+		print(dat)
+
+	o = generatordemo()
+	print(next(o))
+	print(next(o))
+
+	tr = triangles()
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+	print(next(tr))
+
+
 if __name__ == '__main__':
 	print('start learn python')
 
@@ -148,3 +193,5 @@ if __name__ == '__main__':
 	testslice()
 
 	testlistgenerator()
+
+	testgnerator()

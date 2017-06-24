@@ -165,6 +165,14 @@ def testgnerator():
 	print(next(tr))
 
 
+def functional_add(x,y,f):
+	return f(x)+f(y)
+
+def testfunctional():
+
+	print(functional_add(1,-2,abs))
+
+
 if __name__ == '__main__':
 	print('start learn python')
 
@@ -195,3 +203,5 @@ if __name__ == '__main__':
 	testlistgenerator()
 
 	testgnerator()
+
+	testfunctional()

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from collections import Iterable
+import os
+
 def returnfunc(str):
 	return str
 
@@ -99,6 +102,24 @@ def testslice():
 	print(l)
 	print(l[:10])
 
+def testiterate(val):
+	return isinstance(val,Iterable)
+
+def testlistgenerator():
+	print('start test list generator')
+
+	print([x*x for x in range(1,11)])
+
+	print([x*x/2 for x in range(1,11) if x%2 == 0])
+
+	print([a+b for a in 'abc' for b in 'def'])
+
+	print([d for d in os.listdir('.')])
+
+	s = {'a':100,'b':10,'c':132}
+
+	print([('%s = %d'%(k,v)) for k,v in s.items()])
+
 if __name__ == '__main__':
 	print('start learn python')
 
@@ -125,3 +146,5 @@ if __name__ == '__main__':
 	testfunctiontypecheck(100)
 
 	testslice()
+
+	testlistgenerator()
